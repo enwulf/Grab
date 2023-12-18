@@ -10,7 +10,7 @@ Minecraft plugin for grabbing entities like cs 1.6
 </ul>
 
 
-#### Permissions
+#### Commands
 - /grab reload - reload plugin
 - /grab item - get item for grabbing
 
