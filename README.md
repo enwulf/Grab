@@ -20,7 +20,7 @@ Minecraft plugin for grabbing entities like cs 1.6
 
 
 
-#Configuration
+# Configuration
 ```yaml
 menu:
   font: 'Ubuntu Mono' # font must exist in the system
