@@ -8,6 +8,7 @@ Minecraft plugin for grabbing entities like cs 1.6
 <ul>
   <li><strong>Right-Click hold system</strong></li>
   <li><strong>Editable sidebar menu</strong></li>
+  <li>Slot press action</li>
   <li>Grabbing any living entities</li>
 </ul>
 
