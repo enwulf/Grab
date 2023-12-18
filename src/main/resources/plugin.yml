@@ -1,0 +1,9 @@
+name: Grab
+version: '${version}'
+main: ru.enwulf.grab.Grab
+api-version: '1.19'
+prefix: Grab
+authors: [enwulf]
+
+commands:
+  grab:
