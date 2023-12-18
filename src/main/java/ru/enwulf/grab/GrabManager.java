@@ -1,5 +1,6 @@
 package ru.enwulf.grab;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -8,6 +9,8 @@ import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
 import ru.enwulf.grab.ui.MapProvider;
 import ru.enwulf.grab.utils.CC;
+
+import java.util.Map;
 
 public class GrabManager extends AbstractRightClickHandler {
 
@@ -20,14 +23,13 @@ public class GrabManager extends AbstractRightClickHandler {
         startTimer(player);
         startSecondaryLoop(player);
 
+        EntityData entityData = Grab.get().getEntityStorage().get(player);
 
-        Grab.get().getEntityStorage().entrySet().stream()
-                .filter(entry -> entry.getKey().equals(player))
-                .map(entry -> entry.getValue().getEntity())
-                .findFirst()
-                .ifPresent(entity -> CC.sendActionBar(player, "You take a &6" + entity.getName()));
+        if (entityData != null) {
+            LivingEntity entity = entityData.getEntity();
+            CC.sendActionBar(player, "You take a &6" + entity.getName());
+        }
     }
-
 
     public LivingEntity findTargetEntity(Player player) {
         RayTraceResult result = player.getWorld().rayTraceEntities(
@@ -65,6 +67,7 @@ public class GrabManager extends AbstractRightClickHandler {
     public void stopGrabbing(Player player) {
         Grab.get().getEntityStorage().remove(player);
         MapProvider.removeMapFromPlayer(player);
+        CC.clearActionBar(player);
     }
 
 
