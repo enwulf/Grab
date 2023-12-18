@@ -5,18 +5,22 @@ Minecraft plugin for grabbing entities like cs 1.6
 #### 🎆 Features:
 <ul>
   <li><strong>Right-Click hold system</strong></li>
-  <li><strong>Editable menu</strong></li>
+  <li><strong>Editable sidebar menu</strong></li>
   <li>Grabbing any living entities</li>
 </ul>
+
 
 #### Permissions
 - /grab reload - reload plugin
 - /grab item - get item for grabbing
 
+
 #### Permissions
 - grab.use - for all user commands & use
 
-**Configuration**
+
+
+#Configuration
 ```yaml
 menu:
   font: 'Ubuntu Mono' # font must exist in the system
