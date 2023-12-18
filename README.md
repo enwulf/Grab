@@ -1,5 +1,7 @@
 # Minecraft Grab
 
+![gif](demo.gif)
+
 Minecraft plugin for grabbing entities like cs 1.6
 
 #### 🎆 Features:
